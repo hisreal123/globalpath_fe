@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { LoginSchema } from "@/utils/FormValiator";;
 import { Button } from "@/components/ui/button";
 import {
@@ -15,7 +15,7 @@ import { Input } from "../../ui/input";
 import { Link } from "react-router-dom";
 
 // Define types 
-type FormValues = z.infer<typeof LoginSchema>
+const FormValues = z.infer<typeof LoginSchema
 
 const SigninComponent = () => {
   const form = useForm({
@@ -28,7 +28,7 @@ const SigninComponent = () => {
 
 
   // perform signin logic here
-  const onSubmit : SubmitHandler<FormValues>= (values: any) => {
+  const onSubmit = (values: any) => {
     console.log(values);
 
     // values = {}
