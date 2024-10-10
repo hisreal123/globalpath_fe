@@ -1,0 +1,4 @@
+interface IFormInput {
+  email : string,
+  
+}
