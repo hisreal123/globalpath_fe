@@ -1,0 +1,1 @@
+const LoginAuth = new Promise(re)
