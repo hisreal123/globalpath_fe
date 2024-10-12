@@ -1,4 +1,5 @@
-import SigninForm from '../../components/pages/auth/SigninForm';
+import React from 'react'
+import SigninComponent from '../../components/pages/auth/SigninComponent'
 import { Link } from 'react-router-dom';
 
 const Signin = () => {
@@ -10,8 +11,7 @@ const Signin = () => {
         <h2>right</h2>
       </div>
 
-      
-      <SigninForm />
+      <SigninComponent />
     </div>
   );
 }

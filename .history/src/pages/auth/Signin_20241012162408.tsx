@@ -10,8 +10,10 @@ const Signin = () => {
         <h2>right</h2>
       </div>
 
-      
-      <SigninForm />
+      <div className="grid ">
+        <div className="right"> right</div>
+        <SigninForm />
+      </div>
     </div>
   );
 }

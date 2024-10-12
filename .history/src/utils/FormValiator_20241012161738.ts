@@ -56,5 +56,4 @@ export const LoginSchema = z.object({
       passwordRegex,
       "Password must contain at least one letter and one number one number, and no special characters"
     ),
-  role: z.enum(["EMPLOYER", "JOBSEEKER"]), // Ensure "role" is typed as an enum
 });

@@ -10,7 +10,9 @@ const Signin = () => {
         <h2>right</h2>
       </div>
 
-      
+      <div className="grid">
+        
+      </div>
       <SigninForm />
     </div>
   );

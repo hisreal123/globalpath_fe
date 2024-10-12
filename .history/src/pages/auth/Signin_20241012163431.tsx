@@ -1,8 +1,8 @@
-import Signupfrom from '../../components/pages/auth/SignupForm';
-import { Link } from 'react-router-dom'
+import SigninForm from '../../components/pages/auth/SigninForm';
+import { Link } from 'react-router-dom';
 
+const Signin = () => {
 
-const Signup = () => {
   return (
     <div>
       <div className="top_nav px-5 flex items-center justify-between font-bold pt-3">
@@ -10,10 +10,10 @@ const Signup = () => {
         <h2>right</h2>
       </div>
 
-      {/* signupform */}
-      <Signupfrom />
+      
+        <SigninForm />
     </div>
   );
 }
 
-export default Signup
+export default Signin
