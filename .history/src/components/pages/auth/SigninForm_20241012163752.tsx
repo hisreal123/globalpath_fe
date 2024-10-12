@@ -93,14 +93,6 @@ const SigninForm = () => {
             )}
           />
 
-        {/* forgotpassword  */}       
-          <Link
-            to="/auth/reset/forgotPassword"
-            className="text-blue-500 hover:underline text-xs hover:text-blue-800"
-          >
-            Forgot Password
-          </Link>
-
           {/* Role Field */}
           <FormField
             control={form.control}
@@ -139,6 +131,10 @@ const SigninForm = () => {
 
       <div className="w-full h-[.3px] bg-gray-200 rounded-full mt-3 "> </div>
       <p className="text-center text-gray-600 mt-3">
+        New here?
+        <Link to="/auth/signup" className="text-blue-500 hover:underline">
+          Sign up
+        </Link>
         New here?
         <Link to="/auth/signup" className="text-blue-500 hover:underline">
           Sign up

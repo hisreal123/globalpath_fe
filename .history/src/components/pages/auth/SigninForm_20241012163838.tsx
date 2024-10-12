@@ -92,14 +92,10 @@ const SigninForm = () => {
               </FormItem>
             )}
           />
-
-        {/* forgotpassword  */}       
-          <Link
-            to="/auth/reset/forgotPassword"
-            className="text-blue-500 hover:underline text-xs hover:text-blue-800"
-          >
-            Forgot Password
-          </Link>
+        
+        <Link to="/auth/signup" className="text-blue-500 hover:underline text-xs -mt-1">
+          Forgot Password 
+        </Link>
 
           {/* Role Field */}
           <FormField

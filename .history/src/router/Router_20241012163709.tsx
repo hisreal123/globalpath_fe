@@ -15,7 +15,7 @@ import Signup from "../pages/auth/Signup";
 import ForgotPassword from "@/pages/auth/ForgotPassword";
 
 
-const notPages = ["/error", "/auth/signin", "/auth/signup", "/auth/reset/forgotPassword"]
+const notPages = ["/error", "/auth/signin", "/auth/signup", "auth/reset_password"]
 
 
 // Layout component with conditional Navbar
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
             element: <Signup />,
           },
           {
-            path: "/auth/reset/forgotPassword",
+            path: "/auth/signup",
             element: <ForgotPassword />,
           },
         ],

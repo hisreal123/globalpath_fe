@@ -1,4 +1,7 @@
-import { z } from "zod";
+
+const ForgotPasswordForm = () => {
+  return (
+    import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { LoginSchema } from "@/utils/FormValiator";;
@@ -25,7 +28,7 @@ import { useState } from "react";
 // Define types 
 type FormValues = z.infer<typeof LoginSchema>
 
-const SigninForm = () => {
+const ForgotPasswordForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isEmployer, setIsEmployer] = useState<boolean>(true);
 
@@ -101,45 +104,18 @@ const SigninForm = () => {
             Forgot Password
           </Link>
 
-          {/* Role Field */}
-          <FormField
-            control={form.control}
-            name="role"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-md">Role</FormLabel>
-                <Select
-                  onValueChange={(value: "EMPLOYER" | "JOBSEEKER") => {
-                    field.onChange(value); // Type assertion here
-                    setIsEmployer(value === "EMPLOYER"); // Update state based on selected role
-                  }}
-                  value={field.value} // Ensure value is either EMPLOYER or JOBSEEKER
-                >
-                  <SelectTrigger className="min-w-[100%]">
-                    <SelectValue placeholder="Select Role" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="EMPLOYER">EMPLOYER</SelectItem>
-                    <SelectItem value="JOBSEEKER">JOBSEEKER</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
           <Button
             type="submit"
             className="bg-blue-500 text-white w-full p-2 rounded hover:bg-blue-600 mt-5 relative"
           >
-            {isLoading ? "Loading..." : "Sign in"}
+            {isLoading ? "Loading..." : "Submit"}
           </Button>
         </form>
       </Form>
 
       <div className="w-full h-[.3px] bg-gray-200 rounded-full mt-3 "> </div>
       <p className="text-center text-gray-600 mt-3">
-        New here?
+       Back to ?
         <Link to="/auth/signup" className="text-blue-500 hover:underline">
           Sign up
         </Link>
@@ -148,4 +124,6 @@ const SigninForm = () => {
   );
 };
 
-export default SigninForm;
+}
+
+export default ForgotPasswordForm

@@ -60,6 +60,14 @@ export const LoginSchema = z.object({
 });
 
 
-export const ResetPassword = z.object({
+export const LoginSchema = z.object({
   email: z.string().email("Invalid email address"),
+  password: z
+    .string()
+    .min(6, "Password must be at least 8 characters")
+    .regex(
+      passwordRegex,
+      "Password must contain at least one letter and one number one number, and no special characters"
+    ),
+  role: z.enum(["EMPLOYER", "JOBSEEKER"]), // Ensure "role" is typed as an enum
 });

@@ -1,4 +1,7 @@
-import { z } from "zod";
+
+const ForgotPasswordForm = () => {
+  return (
+    import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { LoginSchema } from "@/utils/FormValiator";;
@@ -25,7 +28,7 @@ import { useState } from "react";
 // Define types 
 type FormValues = z.infer<typeof LoginSchema>
 
-const SigninForm = () => {
+const ForgotPasswordForm = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isEmployer, setIsEmployer] = useState<boolean>(true);
 
@@ -101,32 +104,7 @@ const SigninForm = () => {
             Forgot Password
           </Link>
 
-          {/* Role Field */}
-          <FormField
-            control={form.control}
-            name="role"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-md">Role</FormLabel>
-                <Select
-                  onValueChange={(value: "EMPLOYER" | "JOBSEEKER") => {
-                    field.onChange(value); // Type assertion here
-                    setIsEmployer(value === "EMPLOYER"); // Update state based on selected role
-                  }}
-                  value={field.value} // Ensure value is either EMPLOYER or JOBSEEKER
-                >
-                  <SelectTrigger className="min-w-[100%]">
-                    <SelectValue placeholder="Select Role" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="EMPLOYER">EMPLOYER</SelectItem>
-                    <SelectItem value="JOBSEEKER">JOBSEEKER</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          
 
           <Button
             type="submit"
@@ -148,4 +126,6 @@ const SigninForm = () => {
   );
 };
 
-export default SigninForm;
+}
+
+export default ForgotPasswordForm

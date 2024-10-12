@@ -12,10 +12,9 @@ import Find_jobs from "../pages/Find_jobs"
 import Header from "../components/Header";
 import Signin from "../pages/auth/Signin";
 import Signup from "../pages/auth/Signup";
-import ForgotPassword from "@/pages/auth/ForgotPassword";
 
 
-const notPages = ["/error", "/auth/signin", "/auth/signup", "/auth/reset/forgotPassword"]
+const notPages = ["/error", "/auth/signin", "/auth/signup", "auth/reset_password"]
 
 
 // Layout component with conditional Navbar
@@ -65,8 +64,8 @@ const router = createBrowserRouter([
             element: <Signup />,
           },
           {
-            path: "/auth/reset/forgotPassword",
-            element: <ForgotPassword />,
+            path: "/auth/signup",
+            element: <Fog />,
           },
         ],
       },

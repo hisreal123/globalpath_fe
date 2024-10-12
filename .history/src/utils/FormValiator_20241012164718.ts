@@ -62,4 +62,5 @@ export const LoginSchema = z.object({
 
 export const ResetPassword = z.object({
   email: z.string().email("Invalid email address"),
+  
 });

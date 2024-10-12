@@ -1,4 +1,7 @@
-import { z } from "zod";
+
+const ForgotPasswordForm = () => {
+  return (
+    import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { LoginSchema } from "@/utils/FormValiator";;
@@ -148,4 +151,6 @@ const SigninForm = () => {
   );
 };
 
-export default SigninForm;
+}
+
+export default ForgotPasswordForm

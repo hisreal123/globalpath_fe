@@ -15,7 +15,7 @@ import Signup from "../pages/auth/Signup";
 import ForgotPassword from "@/pages/auth/ForgotPassword";
 
 
-const notPages = ["/error", "/auth/signin", "/auth/signup", "/auth/reset/forgotPassword"]
+const notPages = ["/error", "/auth/signin", "/auth/signup", "auth/forgot"]
 
 
 // Layout component with conditional Navbar
